@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Ribbon from "@/components/layout/Ribbon";
 import { ArrowUpAZ, ArrowUpNarrowWide, Expand } from "lucide-react";
 import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 export default function Header() {
   return (
@@ -51,7 +52,7 @@ const PcMenu = () => {
   ];
 
   return (
-    <menu>
+    <menu className="flex gap-6">
       <ul className="h-full flex gap-6 items-center">
         {links.map(({ label, link }) => (
           <li className="text-lg text-black hover:text-primary hover:underline">
@@ -61,6 +62,9 @@ const PcMenu = () => {
           </li>
         ))}
       </ul>
+      <GetInTouch />
     </menu>
   );
 };
+
+const GetInTouch = () => <Button>Get in Touch</Button>;
