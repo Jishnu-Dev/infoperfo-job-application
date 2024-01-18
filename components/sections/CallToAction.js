@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function CallToAction() {
@@ -15,9 +16,10 @@ const SectionTitle = () => (
     <h4 className="text-white text-2xl">The Intelligent Enterprise</h4>
     <Button
       kind="secondary"
-      className="border-white text-white hover:bg-white hover:text-primar"
+      className="border-white text-white hover:bg-white hover:text-red-600 flex gap-6 items-center"
     >
       Contact Us
+      <ArrowRight />
     </Button>
   </div>
 );

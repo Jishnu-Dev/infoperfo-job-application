@@ -22,22 +22,20 @@ export default function Clients() {
         <span className="text-red-500">{` 1000+ customers `}</span>
         across the globe
       </h2>
-      <div className="border-y">
-        <Marquee>
-          <ul className="flex items-center gap-12">
-            {clients.map((client) => (
-              <li key={client} className="first:ml-12">
-                <Image
-                  src={`/images/clients/${client}.svg`}
-                  width={100}
-                  height={100}
-                  alt={client}
-                />
-              </li>
-            ))}
-          </ul>
-        </Marquee>
-      </div>
+      <Marquee>
+        <ul className="flex items-center gap-14">
+          {clients.map((client) => (
+            <li key={client} className="first:ml-12">
+              <Image
+                src={`/images/clients/${client}.svg`}
+                width={100}
+                height={100}
+                alt={client}
+              />
+            </li>
+          ))}
+        </ul>
+      </Marquee>
     </section>
   );
 }

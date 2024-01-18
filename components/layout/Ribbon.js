@@ -16,7 +16,7 @@ export default function NotificationRibbon() {
     },
   ];
   return (
-    <section className="bg-gray-200 text-black">
+    <section className="bg-primary text-white">
       <div className="container py-2 flex justify-end gap-4">
         {socialLinks.map(({ label, url }) => (
           <Link key={url} href={url} className="text-sm hover:underline">
