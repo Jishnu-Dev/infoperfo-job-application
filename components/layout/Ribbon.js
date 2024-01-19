@@ -17,12 +17,26 @@ export default function NotificationRibbon() {
   ];
   return (
     <section className="bg-primary text-white">
-      <div className="container py-2 flex justify-end gap-4">
-        {socialLinks.map(({ label, url }) => (
-          <Link key={url} href={url} className="text-sm hover:underline">
-            {label}
+      <div className="container py-2 flex justify-between">
+        <p className="text-sm">
+          {"Made by, "}
+          <Link
+            className="underline"
+            href="https://jishnu-raj.vercel.app"
+            target="_blank"
+          >
+            Jishnu Raj
           </Link>
-        ))}
+        </p>
+        <ul className="flex gap-4">
+          {socialLinks.map(({ label, url }) => (
+            <li key={url}>
+              <Link href={url} className="text-sm hover:underline">
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

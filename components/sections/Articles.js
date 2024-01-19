@@ -7,19 +7,19 @@ export default function Articles() {
   const articles = [
     {
       title: `What Can A Business Do To Improve Its Productivity?`,
-      figure: "cta-cover.jpg",
+      figure: "article-1-cover.jpg",
       tag: "Study",
       lead: "Enhancing productivity is a constant pursuit for businesses aiming to stay competitive and achieve their goals efficiently. In today’s dynamic and fast-paced business landscape, optimizing productivity has become a strategic imperative. This entails implementing a combination of strategies, processes.",
     },
     {
       title: `How Can Work From Home Burnout Be Avoided And Managed Effectively?`,
-      figure: "cta-cover.jpg",
+      figure: "article-2-cover.jpg",
       tag: "Info Research",
       lead: "The work landscape has undergone a significant transformation with the rise of work from home jobs. Remote work, including data entry and entry-level positions, has become increasingly popular due to its flexibility and convenience.",
     },
     {
       title: `The Significance Of Customer Service In Healthcare`,
-      figure: "cta-cover.jpg",
+      figure: "article-3-cover.jpg",
       tag: "Training",
       lead: "In the rapidly evolving landscape of healthcare, where technology and patient expectations are constantly changing, the significance of customer service has become more prominent than ever. Alongside medical advancements, patients now seek seamless and personalized experiences.",
     },
@@ -58,9 +58,9 @@ const BlogCard = ({ article }) => {
         <figure className="h-72 w-full relative">
           <Image
             fill
-            src={`/images/${figure}`}
             alt={title}
             className="object-cover"
+            src={`/images/${figure}`}
           />
         </figure>
         <div className="grid grid-flow-row gap-20 p-3">

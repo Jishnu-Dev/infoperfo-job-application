@@ -8,7 +8,6 @@ export default function Clients() {
     "ban",
     "bomag",
     "gemo",
-    "guernesey",
     "pentel",
     "tohato",
     "universal",
