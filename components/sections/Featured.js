@@ -6,12 +6,12 @@ export default function Featured() {
   return (
     <section className="container section-spacing grid grid-cols-1 md:grid-cols-2">
       <div
-        className="p-12 bg-gray-100 flex flex-col justify-between"
+        className="p-8 md:p-12 bg-gray-100 flex flex-col justify-between gap-6 md:gap-0"
         data-aos="fade-up"
       >
         <div className="flex flex-col gap-4">
           <p className="text-gray-500">Featured Event</p>
-          <h6 className="text-3xl font-light">
+          <h6 className="text-xl md:text-3xl font-light">
             {`Think 2024 is coming—and we're talking AI for business`}
           </h6>
           <p className="text-light">

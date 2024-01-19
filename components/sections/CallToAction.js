@@ -14,7 +14,7 @@ export default function CallToAction() {
 
 const SectionTitle = () => (
   <div
-    className="w-full h-max bg-primary flex justify-between items-center p-8"
+    className="w-full h-max bg-primary flex flex-col md:flex-row gap-8 md:gap-0 justify-start md:justify-between items-start md:items-center p-8"
     data-aos="fade-up"
   >
     <h4 className="text-white text-2xl">The Intelligent Enterprise</h4>
@@ -34,9 +34,9 @@ const SectionBody = () => (
     data-aos="fade-up"
     data-aos-delay={200}
   >
-    <div className="p-12 flex flex-col gap-8">
+    <div className="p-8 flex flex-col gap-8">
       <h6 className="text-primary">Exceptional CX</h6>
-      <h5 className="text-3xl font-light">
+      <h5 className="text-xl md:text-3xl font-light">
         Do You Want To Lead Your Industry From The Front With Exceptional CX?
       </h5>
       <p>

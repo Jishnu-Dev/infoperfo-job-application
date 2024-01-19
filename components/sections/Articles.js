@@ -29,7 +29,7 @@ export default function Articles() {
 
   return (
     <section className="container section-spacing grid grid-flow-row gap-8">
-      <h5 className="text-3xl font-light" data-aos="fade-up">
+      <h5 className="text-2xl md:text-3xl font-light" data-aos="fade-up">
         Top <span className="text-primary">Articles</span>
       </h5>
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-1">

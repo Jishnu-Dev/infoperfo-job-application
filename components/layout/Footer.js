@@ -71,7 +71,7 @@ const FooterMenu = () => {
   ];
 
   return (
-    <ul className="grid grid-cols-4 gap-6">
+    <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
       {footerLinks.map(({ title, links }) => (
         <li key={title} className="grid grid-flow-row gap-4">
           {links.map((link) => (
@@ -113,7 +113,7 @@ const SocialLinks = () => {
     },
   ];
   return (
-    <section className="py-4 border-y flex justify-between">
+    <section className="py-4 border-y flex flex-col md:flex-row max-md:gap-4 justify-between">
       <h6>Connect with us</h6>
       <ul className="flex gap-4">
         {socialLinks.map(({ media, Icon, url }) => (
@@ -136,8 +136,6 @@ const SocialLinks = () => {
 const CopyRight = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <p className="text-sm text-black/30">
-      {`${currentYear} All rights reserved.`}
-    </p>
+    <p className="text-sm text-black/30">{`© ${currentYear} All rights reserved.`}</p>
   );
 };

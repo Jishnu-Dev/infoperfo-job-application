@@ -28,7 +28,7 @@ export default function NotificationRibbon() {
             Jishnu Raj
           </Link>
         </p>
-        <ul className="flex gap-4">
+        <ul className="hidden md:flex gap-4 flex-shrink-0">
           {socialLinks.map(({ label, url }, i) => (
             <li key={i}>
               <Link

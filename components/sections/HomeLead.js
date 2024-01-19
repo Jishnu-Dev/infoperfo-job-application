@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function HomeLead() {
   return (
-    <section className="flex w-full">
+    <section className="flex flex-col md:flex-row w-full">
       {/* Blog #1 */}
       <div
-        className="container w-6/12 h-80 bg-red-800 flex flex-col justify-between gap-8 py-14"
+        className="container w-full md:w-6/12 h-80 bg-red-800 flex flex-col justify-between gap-8 py-14"
         data-aos="fade-up"
       >
         <p className="text-white font-light text-4xl">
@@ -17,7 +17,7 @@ export default function HomeLead() {
 
       {/* Block #2 */}
       <div
-        className="container w-3/12 h-80 bg-red-600 flex flex-col justify-between gap-8 py-14"
+        className="container w-full md:w-3/12 h-80 bg-red-600 flex flex-col justify-between gap-8 py-14"
         data-aos="fade-up"
         data-aos-delay={200}
       >
@@ -29,7 +29,7 @@ export default function HomeLead() {
 
       {/* Block #3 */}
       <div
-        className="container w-3/12 h-80 bg-red-500 flex flex-col justify-between gap-8 py-14"
+        className="container w-full md:w-3/12 h-80 bg-red-500 flex flex-col justify-between gap-8 py-14"
         data-aos="fade-up"
         data-aos-delay={300}
       >

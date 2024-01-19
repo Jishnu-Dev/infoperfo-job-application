@@ -3,7 +3,7 @@ import { BarChart2, Heart, Shuffle, Verified } from "lucide-react";
 export default function Approach() {
   return (
     <section className="container section-spacing grid grid-flow-row gap-14">
-      <h5 className="text-3xl" data-aos="fade-up">
+      <h5 className="text-2xl md:text-3xl" data-aos="fade-up">
         Our <span className="text-primary">Unique Approach</span> To Improving
         Your CX
       </h5>
@@ -35,12 +35,22 @@ const Approaches = () => {
       {approachMethods.map(({ title, lead, Icon }, i) => (
         <li key={title} data-aos="fade-up" data-aos-delay={i * 100}>
           <div className="grid grid-flow-row gap-4">
-            <Icon
-              size={62}
-              className="text-primary border border-primary/50 p-3 rounded-full"
-            />
-            <h6 className="text-2xl text-primary">{title}</h6>
-            <p>{lead}</p>
+            <div data-aos="fade-up" data-aos-delay={i * 60}>
+              <Icon
+                size={62}
+                className="text-primary border border-primary/50 p-3 rounded-full"
+              />
+            </div>
+            <h6
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+              className="text-xl md:text-2xl text-primary"
+            >
+              {title}
+            </h6>
+            <p data-aos="fade-up" data-aos-delay={i * 220}>
+              {lead}
+            </p>
           </div>
         </li>
       ))}

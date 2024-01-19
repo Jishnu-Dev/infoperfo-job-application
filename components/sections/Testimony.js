@@ -2,7 +2,7 @@ export default function Testimony() {
   return (
     <div className="container section-spacing grid grid-flow-row gap-12 text-center">
       <h4
-        className="text-5xl font-light w-full md:w-8/12 mx-auto"
+        className="text-3xl md:text-5xl font-light w-full md:w-8/12 mx-auto"
         data-aos="fade-up"
       >
         Benefit from 20+ years of proven expertise
