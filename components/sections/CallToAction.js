@@ -25,7 +25,7 @@ const SectionTitle = () => (
 );
 
 const SectionBody = () => (
-  <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-2">
+  <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-2 h-[24rem]">
     <div className="p-5 grid grid-flow-row gap-3">
       <h6 className="text-primary">Exceptional CX</h6>
       <h5 className="text-3xl font-light">
@@ -44,8 +44,10 @@ const SectionBody = () => (
       <Image
         fill
         loading="eager"
+        alt="infoperformance"
         className="object-cover"
         src="/images/cta-cover.jpg"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
   </div>

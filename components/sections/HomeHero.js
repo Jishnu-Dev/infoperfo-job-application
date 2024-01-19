@@ -9,8 +9,10 @@ export default function HomeHero() {
         fill
         priority
         loading="eager"
+        alt="infoperformance"
         src="/images/home-hero-banner.jpg"
         className="object-cover object-center"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         style={{
           transform: "scaleX(-1)",
         }}

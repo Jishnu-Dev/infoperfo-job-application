@@ -53,7 +53,7 @@ const BlogCard = ({ article }) => {
   const slug = createSlug(title);
 
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link href={`/jishnu/${slug}`}>
       <article className="grid grid-flow-row gap-4 bg-gray-100 hover:bg-gray-200 group">
         <figure className="h-72 w-full relative">
           <Image
@@ -61,6 +61,7 @@ const BlogCard = ({ article }) => {
             alt={title}
             className="object-cover"
             src={`/images/${figure}`}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </figure>
         <div className="grid grid-flow-row gap-20 p-3">

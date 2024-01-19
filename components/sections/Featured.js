@@ -17,7 +17,8 @@ export default function Featured() {
           </p>
         </div>
         <Link
-          href="/participate"
+          href="https://nextjs.org/"
+          target="_blank"
           className="flex gap-2 text-primary hover:underline group"
         >
           Participate
@@ -30,6 +31,7 @@ export default function Featured() {
           alt="infoperformance"
           className="object-cover"
           src="/images/featured-event-cover.jpg"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
     </section>

@@ -19,35 +19,37 @@ export default function Header() {
 }
 
 const Branding = () => (
-  <h1 className="text-2xl font-semibold text-primary uppercase leading-5 flex gap-1 items-center">
-    <Expand size={44} />
-    INFO
-    <br />
-    PERFORMANCE
-  </h1>
+  <Link href="/">
+    <h1 className="text-2xl font-semibold text-primary uppercase leading-5 flex gap-1 items-center">
+      <Expand size={44} />
+      INFO
+      <br />
+      PERFORMANCE
+    </h1>
+  </Link>
 );
 
 const PcMenu = () => {
   const links = [
     {
       label: "Platform",
-      link: "#",
+      link: "platfoms",
     },
     {
       label: "Solutions",
-      link: "#",
+      link: "splutions",
     },
     {
       label: "Resources",
-      link: "#",
+      link: "resources",
     },
     {
       label: "Partners",
-      link: "#",
+      link: "partners",
     },
     {
       label: "Company",
-      link: "#",
+      link: "company",
     },
   ];
 
@@ -56,7 +58,7 @@ const PcMenu = () => {
       <ul className="h-full flex gap-6 items-center">
         {links.map(({ label, link }) => (
           <li className="text-lg text-black hover:text-primary hover:underline">
-            <Link key={link} href={link}>
+            <Link key={link} href={`/jishnu/${link}`}>
               {label}
             </Link>
           </li>

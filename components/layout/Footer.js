@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Target, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -75,7 +75,7 @@ const FooterMenu = () => {
           {links.map((link) => (
             <Link
               key={link}
-              href={link}
+              href={`/jishnu/${link}`}
               className="text-sm capitalize text-black/60 hover:text-black"
             >
               {link}
@@ -92,22 +92,22 @@ const SocialLinks = () => {
     {
       media: "Facebook",
       Icon: Facebook,
-      url: "www.facebook.com",
+      url: "https://www.facebook.com",
     },
     {
       media: "LinkedIn",
       Icon: Linkedin,
-      url: "www.linkedin.com",
+      url: "https://www.linkedin.com",
     },
     {
       media: "YouTube",
       Icon: Youtube,
-      url: "www.youtube.com",
+      url: "https://www.youtube.com",
     },
     {
       media: "Twitter",
       Icon: Twitter,
-      url: "www.Twitter.com",
+      url: "https://www.Twitter.com",
     },
   ];
   return (
@@ -116,7 +116,7 @@ const SocialLinks = () => {
       <ul className="flex gap-4">
         {socialLinks.map(({ media, Icon, url }) => (
           <li>
-            <Link href={url}>
+            <Link href={url} target="_blank">
               {
                 <Icon
                   size={42}

@@ -10,10 +10,10 @@ import Services from "@/components/sections/Services";
 import Testimony from "@/components/sections/Testimony";
 import { tagline } from "@/lib/constants";
 
-export const metadata = {
-  title: `Home | ${tagline}`,
-  description: tagline,
-};
+// export const metadata = {
+//   title: `Home | ${tagline}`,
+//   description: tagline,
+// };
 
 export default function Home() {
   return (

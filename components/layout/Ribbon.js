@@ -4,11 +4,11 @@ export default function NotificationRibbon() {
   const socialLinks = [
     {
       label: "Help Center",
-      url: "www.facebook.com",
+      url: "https://nextjs.org/",
     },
     {
       label: "Privacy",
-      url: "www.linkedin.com",
+      url: "https://nextjs.org/",
     },
     {
       label: "Connect",
@@ -29,9 +29,13 @@ export default function NotificationRibbon() {
           </Link>
         </p>
         <ul className="flex gap-4">
-          {socialLinks.map(({ label, url }) => (
-            <li key={url}>
-              <Link href={url} className="text-sm hover:underline">
+          {socialLinks.map(({ label, url }, i) => (
+            <li key={i}>
+              <Link
+                href={url}
+                className="text-sm hover:underline"
+                target="_blank"
+              >
                 {label}
               </Link>
             </li>
