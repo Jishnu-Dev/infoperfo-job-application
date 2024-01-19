@@ -10,7 +10,7 @@ export const size = {
 
 export default async function OGImage() {
   const background = await fetch(
-    new URL("../public/images/home-hero-banner.jpg", import.meta.url)
+    new URL("../public/images/og-background.jpg", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   const imageMarkDown = (
