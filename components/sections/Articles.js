@@ -1,7 +1,9 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+
+import Button from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import { createSlug } from "@/lib/utils";
 
 export default function Articles() {
   const articles = [
@@ -27,12 +29,17 @@ export default function Articles() {
 
   return (
     <section className="container section-spacing grid grid-flow-row gap-8">
-      <h5 className="text-3xl font-light">
+      <h5 className="text-3xl font-light" data-aos="fade-up">
         Top <span className="text-primary">Articles</span>
       </h5>
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-1">
         {articles.map((article, i) => (
-          <BlogCard key={i} article={article} />
+          <BlogCard
+            key={i}
+            article={article}
+            data-aos="fade-up"
+            data-aos-delay={i * 150}
+          />
         ))}
       </ul>
       <Button kind="secondary" className="mx-auto">
@@ -42,26 +49,20 @@ export default function Articles() {
   );
 }
 
-const BlogCard = ({ article }) => {
+const BlogCard = ({ article, ...props }) => {
   const { title, figure, lead, tag } = article;
-
-  function createSlug(blogTitle) {
-    const slug = blogTitle.toLowerCase().replace(/\s+/g, "-");
-    const cleanSlug = slug.replace(/[^a-z0-9-]/g, "");
-    return cleanSlug;
-  }
   const slug = createSlug(title);
 
   return (
-    <Link href={`/jishnu/${slug}`}>
+    <Link href={`/jishnu/${slug}`} {...props}>
       <article className="grid grid-flow-row gap-4 bg-gray-100 hover:bg-gray-200 group">
-        <figure className="h-72 w-full relative">
+        <figure className="h-72 w-full relative overflow-hidden">
           <Image
             fill
             alt={title}
-            className="object-cover"
             src={`/images/${figure}`}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="100vw"
+            className="object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
           />
         </figure>
         <div className="grid grid-flow-row gap-20 p-3">

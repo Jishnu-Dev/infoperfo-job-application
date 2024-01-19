@@ -1,8 +1,14 @@
+import { tagline } from "@/lib/constants";
+import { capitalize } from "@/lib/utils";
 import Link from "next/link";
 
-export const metadata = {
-  title: "",
-};
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  return {
+    title: capitalize(slug),
+    description: tagline,
+  };
+}
 
 export default function Page({ params }) {
   const { slug } = params;

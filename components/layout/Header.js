@@ -37,7 +37,7 @@ const PcMenu = () => {
     },
     {
       label: "Solutions",
-      link: "splutions",
+      link: "solutions",
     },
     {
       label: "Resources",

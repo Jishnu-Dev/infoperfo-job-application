@@ -24,14 +24,21 @@ export default function Services() {
     },
   ];
   return (
-    <section className="container section-spacing grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-      {services.map(({ title, Icon, desc }) => (
-        <div key={title} className="grid grid-flow-row gap-2">
-          <Icon size={42} />
-          <h4 className="text-2xl font-light w-full md:w-8/12">{title}</h4>
-          <p>{desc}</p>
-        </div>
-      ))}
+    <section className="container section-spacing">
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        {services.map(({ title, Icon, desc }, i) => (
+          <li
+            key={title}
+            className="grid grid-flow-row gap-2"
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
+          >
+            <Icon size={42} />
+            <h4 className="text-2xl font-light w-full md:w-8/12">{title}</h4>
+            <p>{desc}</p>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -1,5 +1,7 @@
 import { Facebook, Linkedin, Target, Twitter, Youtube } from "lucide-react";
+
 import Link from "next/link";
+import { createSlug } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -75,7 +77,7 @@ const FooterMenu = () => {
           {links.map((link) => (
             <Link
               key={link}
-              href={`/jishnu/${link}`}
+              href={`/jishnu/${createSlug(link)}`}
               className="text-sm capitalize text-black/60 hover:text-black"
             >
               {link}
@@ -92,22 +94,22 @@ const SocialLinks = () => {
     {
       media: "Facebook",
       Icon: Facebook,
-      url: "https://www.facebook.com",
+      url: "https://nextjs.org/",
     },
     {
       media: "LinkedIn",
       Icon: Linkedin,
-      url: "https://www.linkedin.com",
+      url: "https://nextjs.org/",
     },
     {
       media: "YouTube",
       Icon: Youtube,
-      url: "https://www.youtube.com",
+      url: "https://nextjs.org/",
     },
     {
       media: "Twitter",
       Icon: Twitter,
-      url: "https://www.Twitter.com",
+      url: "https://nextjs.org/",
     },
   ];
   return (

@@ -1,21 +1,30 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import classNames from "classnames";
+
+import { siteBasePath, siteName, tagline } from "@/lib/constants";
+
+import Aos from "@/components/ui/Aos";
 import Footer from "@/components/layout/Footer";
-import { siteName, tagline } from "@/lib/constants";
+import Header from "@/components/layout/Header";
+import { Inter } from "next/font/google";
+import classNames from "classnames";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport = {
+  themeColor: "#dc2626",
+};
+
 export const metadata = {
-  title: siteName,
+  title: {
+    template: `%s | ${siteName}`,
+    default: siteName,
+  },
   description: tagline,
-  // metadataBase: new URL(siteBasePath),
+  metadataBase: new URL(siteBasePath),
   generator: "Next.js",
   applicationName: "Next.js",
   referrer: "origin-when-cross-origin",
   keywords: [siteName, tagline],
-  colorScheme: "light",
   creator: "Jishnu Raj",
   publisher: "Jishnu Raj",
   formatDetection: {
@@ -26,11 +35,11 @@ export const metadata = {
   openGraph: {
     title: siteName,
     description: tagline,
-    url: "https://stoziaclub.com",
+    url: siteBasePath,
     siteName: siteName,
     locale: "en_US",
     type: "article",
-    publishedTime: "2023-01-01T00:00:00.000Z",
+    publishedTime: new Date().getTime(),
     authors: ["Jishnu Raj"],
   },
   twitter: {
@@ -51,7 +60,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  // sitemap: `${siteBasePath}/sitemap.xml`
+  sitemap: `${siteBasePath}/sitemap.xml`,
 };
 
 export default function RootLayout({ children }) {
@@ -66,6 +75,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-grow bg-white">{children}</main>
         <Footer />
+        <Aos />
       </body>
     </html>
   );

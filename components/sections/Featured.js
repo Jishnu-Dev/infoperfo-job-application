@@ -5,7 +5,10 @@ import Link from "next/link";
 export default function Featured() {
   return (
     <section className="container section-spacing grid grid-cols-1 md:grid-cols-2">
-      <div className="p-12 bg-gray-100 flex flex-col justify-between">
+      <div
+        className="p-12 bg-gray-100 flex flex-col justify-between"
+        data-aos="fade-up"
+      >
         <div className="flex flex-col gap-4">
           <p className="text-gray-500">Featured Event</p>
           <h6 className="text-3xl font-light">
@@ -25,13 +28,13 @@ export default function Featured() {
           <ArrowRight className="group-hover:translate-x-2 transition-all duration-200 ease-in-out" />
         </Link>
       </div>
-      <div className="h-[30rem] w-full relative">
+      <div className="h-[30rem] w-full relative" data-aos="fade-down">
         <Image
           fill
           alt="infoperformance"
           className="object-cover"
           src="/images/featured-event-cover.jpg"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="100vw"
         />
       </div>
     </section>

@@ -31,7 +31,7 @@ export default function Clients() {
           ))}
         </ul>
       </Marquee>
-      <h2 className="text-2xl font-light text-center">
+      <h2 className="text-2xl font-light text-center" data-aos="fade-up">
         Trusted by
         <span className="text-red-500">{` 1000+ customers `}</span>
         across the globe

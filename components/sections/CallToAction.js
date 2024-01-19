@@ -1,6 +1,7 @@
-import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CallToAction() {
   return (
@@ -12,21 +13,28 @@ export default function CallToAction() {
 }
 
 const SectionTitle = () => (
-  <div className="w-full h-max bg-primary flex justify-between items-center p-8">
+  <div
+    className="w-full h-max bg-primary flex justify-between items-center p-8"
+    data-aos="fade-up"
+  >
     <h4 className="text-white text-2xl">The Intelligent Enterprise</h4>
-    <Button
-      kind="secondary"
-      className="border-white text-white hover:bg-white hover:text-red-600 flex gap-6 items-center"
+    <Link
+      href="/jishnu/contact-us"
+      className="flex gap-3 items-center text-white group"
     >
       Contact Us
-      <ArrowRight />
-    </Button>
+      <ArrowRight className="group-hover:translate-x-2 transition-all duration-300 ease-in-out" />
+    </Link>
   </div>
 );
 
 const SectionBody = () => (
-  <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-2 h-[24rem]">
-    <div className="p-5 grid grid-flow-row gap-3">
+  <div
+    className="bg-gray-200 grid grid-cols-1 md:grid-cols-2"
+    data-aos="fade-up"
+    data-aos-delay={200}
+  >
+    <div className="p-12 flex flex-col gap-8">
       <h6 className="text-primary">Exceptional CX</h6>
       <h5 className="text-3xl font-light">
         Do You Want To Lead Your Industry From The Front With Exceptional CX?
@@ -38,6 +46,9 @@ const SectionBody = () => (
         complying with every individual customer’s unique expectations is a
         complex process. There is no universal customer experience approach.
       </p>
+      <Button kind="secondary" className="mt-14">
+        Book a demo
+      </Button>
     </div>
     {/* Right cover */}
     <div className="relative">
@@ -47,7 +58,7 @@ const SectionBody = () => (
         alt="infoperformance"
         className="object-cover"
         src="/images/cta-cover.jpg"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="100vw"
       />
     </div>
   </div>
