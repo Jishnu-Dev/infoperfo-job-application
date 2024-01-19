@@ -16,26 +16,26 @@ export default async function OGImage() {
         height: "100%",
         color: "black",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
         padding: "4rem",
         position: "relative",
+        alignItems: "center",
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
       }}
     >
       <h3
         style={{
-          color: "white",
-          position: "absolute",
           top: 0,
           left: "20px",
-          backgroundColor: "black",
+          color: "white",
+          paddingTop: "2",
+          fontSize: "2rem",
+          paddingBottom: "2",
           paddingLeft: "8px",
           paddingRight: "8px",
-          paddingTop: "2",
-          paddingBottom: "2",
-          fontSize: "2rem",
+          position: "absolute",
+          backgroundColor: "#dc2626",
         }}
       >
         Infoperformance
@@ -47,15 +47,15 @@ export default async function OGImage() {
           marginTop: "-12px",
         }}
       >
-        Accelerate Your Company's CX And Digital Transformation
+        {`Accelerate Your Company's CX And Digital Transformation`}
       </h1>
       <div
         style={{
           width: "100%",
           display: "flex",
-          justifyContent: "space-around",
-          position: "absolute",
           bottom: "5rem",
+          position: "absolute",
+          justifyContent: "space-around",
         }}
       >
         <p>www.linkedin.com/info</p>
