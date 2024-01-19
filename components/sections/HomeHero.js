@@ -22,12 +22,8 @@ export default function HomeHero() {
         gap-6 p-14 border-r-8 border-red-500 backdrop-filter backdrop-blur-sm bg-opacity-10"
       >
         <h2 className="font-light text-black text-5xl uppercase">
-          Accelerate Your Company's <br />
-          CX And Digital Transformation
-          {/* {`Choose Your Journey To `}
-          <span className="text-red-500">Experiences</span>
-          {` That Drive Business `}
-          <span className="text-red-500">Momentum</span> */}
+          {`Accelerate Your Company's`} <br />
+          {`CX And Digital Transformation`}
         </h2>
         <p className="leading-relaxed">
           We make it easier for you to do what you do best. Purpose-built for

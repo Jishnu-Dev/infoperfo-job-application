@@ -9,7 +9,7 @@ export default function Featured() {
         <div className="flex flex-col gap-4">
           <p className="text-gray-500">Featured Event</p>
           <h6 className="text-3xl font-light">
-            Think 2024 is coming—and we're talking AI for business
+            {`Think 2024 is coming—and we're talking AI for business`}
           </h6>
           <p className="text-light">
             Join us in Jumeirah, 20-24 January for Think 2024, and discover how

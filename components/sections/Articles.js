@@ -31,8 +31,8 @@ export default function Articles() {
         Top <span className="text-primary">Articles</span>
       </h5>
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-1">
-        {articles.map((article) => (
-          <BlogCard article={article} />
+        {articles.map((article, i) => (
+          <BlogCard key={i} article={article} />
         ))}
       </ul>
       <Button kind="secondary" className="mx-auto">

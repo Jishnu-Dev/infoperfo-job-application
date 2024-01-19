@@ -57,10 +57,11 @@ const PcMenu = () => {
     <menu className="flex gap-6">
       <ul className="h-full flex gap-6 items-center">
         {links.map(({ label, link }) => (
-          <li className="text-lg text-black hover:text-primary hover:underline">
-            <Link key={link} href={`/jishnu/${link}`}>
-              {label}
-            </Link>
+          <li
+            key={link}
+            className="text-lg text-black hover:text-primary hover:underline"
+          >
+            <Link href={`/jishnu/${link}`}>{label}</Link>
           </li>
         ))}
       </ul>

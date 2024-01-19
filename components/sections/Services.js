@@ -26,11 +26,9 @@ export default function Services() {
   return (
     <section className="container section-spacing grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
       {services.map(({ title, Icon, desc }) => (
-        <div className="grid grid-flow-row gap-2">
+        <div key={title} className="grid grid-flow-row gap-2">
           <Icon size={42} />
-          <h4 className="text-2xl font-light">
-            Intelligent Document Processing
-          </h4>
+          <h4 className="text-2xl font-light w-full md:w-8/12">{title}</h4>
           <p>{desc}</p>
         </div>
       ))}

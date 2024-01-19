@@ -115,7 +115,7 @@ const SocialLinks = () => {
       <h6>Connect with us</h6>
       <ul className="flex gap-4">
         {socialLinks.map(({ media, Icon, url }) => (
-          <li>
+          <li key={media}>
             <Link href={url} target="_blank">
               {
                 <Icon
