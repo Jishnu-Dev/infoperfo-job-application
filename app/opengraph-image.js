@@ -9,14 +9,18 @@ export const size = {
 };
 
 export default async function OGImage() {
+  const background = await fetch(
+    new URL("../public/images/home-hero-banner.jpg", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+
   const imageMarkDown = (
     <div
       style={{
         width: "100%",
         height: "100%",
-        color: "black",
+        color: "white",
         display: "flex",
-        padding: "4rem",
+        padding: "2rem",
         position: "relative",
         alignItems: "center",
         flexDirection: "column",
@@ -24,10 +28,19 @@ export default async function OGImage() {
         backgroundImage: "linear-gradient(to bottom, #dbf4ff, #fff1f1)",
       }}
     >
+      <img
+        src={background}
+        alt={alt}
+        style={{
+          objectFit: "cover",
+          width: "100%",
+          height: "100%",
+        }}
+      />
       <h3
         style={{
-          top: 0,
-          left: "20px",
+          top: "25px",
+          left: "45px",
           color: "white",
           paddingTop: "2",
           fontSize: "2rem",
@@ -38,28 +51,38 @@ export default async function OGImage() {
           backgroundColor: "#dc2626",
         }}
       >
-        Infoperformance
+        INFORPERFORMANCE
       </h3>
-      <h1
-        style={{
-          fontSize: "3rem",
-          textAlign: "center",
-          marginTop: "-12px",
-        }}
-      >
-        {`Accelerate Your Company's CX And Digital Transformation`}
-      </h1>
       <div
         style={{
-          width: "100%",
+          left: "0",
+          right: "0",
+          bottom: "30px",
           display: "flex",
-          bottom: "5rem",
           position: "absolute",
-          justifyContent: "space-around",
+          flexDirection: "column",
+          backgroundColor: "rgba(0,0,0,0.3)",
         }}
       >
-        <p>www.linkedin.com/info</p>
-        <p>www.info.com</p>
+        <h1
+          style={{
+            fontSize: "3rem",
+            textAlign: "center",
+          }}
+        >
+          {`Accelerate Your Company's CX And Digital Transformation`}
+        </h1>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            bottom: "5rem",
+            justifyContent: "space-around",
+          }}
+        >
+          <p>www.linkedin.com/info</p>
+          <p>www.info.com</p>
+        </div>
       </div>
     </div>
   );
