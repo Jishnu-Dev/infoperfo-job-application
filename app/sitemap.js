@@ -37,7 +37,7 @@ export default async function sitemap() {
 
   const sitemapEntries = [
     {
-      url: "/",
+      url: siteBasePath,
       lastModified: currentDate,
       changeFrequency: "daily",
       priority: 1,
