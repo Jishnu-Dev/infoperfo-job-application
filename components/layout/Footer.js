@@ -51,7 +51,7 @@ const FooterMenu = () => {
       links: [
         "About Info",
         "Info Life",
-        "Diversity, Equity, Inclusion, Belonging",
+        "Diversity",
         "Sustainability",
         "Newsroom",
         "Careers",
