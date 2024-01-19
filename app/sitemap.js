@@ -2,7 +2,6 @@ import { siteBasePath } from "@/lib/constants";
 
 export default async function sitemap() {
   const currentDate = new Date();
-  // Generate sitemap entries
   const possibleSlugs = [
     "platforms",
     "solutions",
