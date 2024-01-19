@@ -9,15 +9,19 @@ export default function HomeHero() {
         fill
         priority
         loading="eager"
-        src="/images/hero-banner-1.jpg"
+        src="/images/home-hero-banner.jpg"
         className="object-cover object-center"
+        style={{
+          transform: "scaleX(-1)",
+        }}
       />
       <div
-        className="absolute top-0 bottom-0 right-10 h-max my-auto w-1/2 bg-white flex flex-col justify-center 
-        gap-6 p-14 border-r-8 border-red-500"
+        className="absolute top-0 bottom-0 right-10 h-max my-auto w-1/2 bg-white/80 flex flex-col justify-center 
+        gap-6 p-14 border-r-8 border-red-500 backdrop-filter backdrop-blur-sm bg-opacity-10"
       >
         <h2 className="font-light text-black text-5xl uppercase">
-          Accelerate Your Company's CX And Digital Transformation
+          Accelerate Your Company's <br />
+          CX And Digital Transformation
           {/* {`Choose Your Journey To `}
           <span className="text-red-500">Experiences</span>
           {` That Drive Business `}
